@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Skill Extraction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="main_heading">
+
+        <h2 class="ghost">
+            <span>R</span>
+            <span>E</span>
+            <span>S</span>
+            <span>U</span>
+            <span>M</span>
+            <span>E</span>
+            <span>&nbsp;</span>
+            <span>L</span>
+            <span>E</span>
+            <span>N</span>
+            <span>S</span>
+        </h2>
+    </div>
+
+    <div class="container">
+        
+        <p class = "effect">Upload your PDF documents below to generate Results.</p>
+        
+        <div class="upload-box">
+            <div class="icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            
+            <form method="POST" enctype="multipart/form-data">
+                <label for="file-upload" class="custom-file-upload">
+                    Choose files
+                </label>
+                <input id="file-upload" type="file" name="file" accept=".pdf, .txt" required>
+                <button type="submit">Upload and Analyze</button>
+            </form>
+            <p>or drop them here</p>
+            <small>Upload one or multiple PDF files.</small>
+        </div>
+
+        <!-- PDF Preview Section -->
+        <div id="pdf-preview-container" style="display: none;">
+            <h3>PDF Preview</h3>
+            <iframe id="pdf-preview" width="100%" height="400px"></iframe>
+        </div>
+
+        {% if predicted_category %}
+            <div class="results">
+                <h2>Predicted Category: <span>{{ predicted_category }}</span></h2>
+                <h3>Extracted Skills</h3>
+                <ul class="skills-list">
+                    {% for skill in extracted_skills %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+                <h3>Suggested Skills</h3>
+                <ul class="skills-list">
+                    {% for skill in suggested_skills %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

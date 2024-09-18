@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Playpen+Sans:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #dde1e7;
+    color: #EFEBD6;
+    margin: 0;
+    padding: 20px;
+}
+
+.main_heading {
+    font-family: "Anton", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.main_heading img{
+    height: 10%;
+    width: 10%;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #e6e6e7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.effect{
+    font-size: x-large;
+    font-weight: normal;
+    -webkit-text-stroke: 1px #554d4d;
+    color: transparent;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -600px 0;
+    animation: backcolor 5s linear infinite alternate;
+}
+
+@keyframes backcolor {
+    100%{
+        background-position: 0 0;
+    }
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 20px 0;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-weight: 100;
+    font-size: large;
+}
+
+.upload-box {
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.icon {
+    margin-bottom: 15px;
+}
+
+.icon i {
+    font-size: 40px;
+    color: #000000;
+}
+
+
+input[type="file"] {
+    display: none; /* Hide default file input */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    color: rgb(0, 0, 0); 
+    background-color: #dbdbdb; 
+    border-radius: 5px; 
+}
+
+.custom-file-upload:hover {
+   background-color: #0056b3; 
+}
+
+button {
+   padding: 10px; 
+   margin-left: 1.5em;
+   background-color: #28a745; 
+   color: rgb(0, 0, 0); 
+   border: none; 
+   border-radius: 5px; 
+   cursor: pointer; 
+   font-weight: bold; 
+}
+
+button:hover {
+   background-color: #218838; 
+}
+
+small {
+   display:block; 
+   margin-top:10px; 
+   color:#5a5959; 
+}
+
+/* Ghost effect styles */
+h2.ghost {
+   font-size: 4em; /* Adjust font size as needed */
+   transition: filter 0.5s ease; /* Transition effect */
+}
+
+h2.ghost span {
+   transition: 1.5s; /* Transition for each character */
+}
+
+h2.ghost:hover span {
+   filter: blur(20px); /* Blur effect on hover */
+   opacity: 0; /* Fade out effect */
+   transform: scale(2); /* Scale up effect */
+}
+
+/* Delay effects for each character */
+h2.ghost span:nth-child(10n+1) { transition-delay: 0.1s; }
+h2.ghost span:nth-child(10n+2) { transition-delay: 0.2s; }
+h2.ghost span:nth-child(10n+3) { transition-delay: 0.3s; }
+h2.ghost span:nth-child(10n+4) { transition-delay: 0.4s; }
+h2.ghost span:nth-child(10n+5) { transition-delay: 0.5s; }
+h2.ghost span:nth-child(10n+6) { transition-delay: 0.6s; }
+h2.ghost span:nth-child(10n+7) { transition-delay: 0.7s; }
+h2.ghost span:nth-child(10n+8) { transition-delay: 0.8s; }
+h2.ghost span:nth-child(10n+9) { transition-delay: 0.9s; }
+h2.ghost span:nth-child(10n+10) { transition-delay: 1.0s; }
+
+.results {
+   margin-top :20px ; 
+}
+
+.results h2 {
+    font-weight: 300;
+   color:#000000 ; 
+}
+
+.skills-list {
+   list-style-type:none ; /* Remove bullet points */
+   padding-left :0 ; /* Remove padding */
+}
+
+.skills-list li {
+   background-color :#96a4b1 ; /* Light grey background */
+   margin-bottom :5px ; /* Space between items */
+   padding :8px ; /* Padding for items */
+   border-radius :5px ; /* Rounded corners */
+}
