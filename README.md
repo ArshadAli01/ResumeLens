@@ -55,7 +55,6 @@ The tool will display:
 ### 5. **Skill Suggestion**
 - **Missing skills** are suggested by comparing the extracted skills with the **ideal skill set** for the predicted category using `get_global_skills`.
 
----
 
 ## This is all about ResumeLens.
 ## Thank You!
